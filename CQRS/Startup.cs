@@ -10,6 +10,7 @@ namespace CQRS
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            // darek to pedał
         }
     }
 }
