@@ -2,8 +2,8 @@
 
 namespace CQRS.DataAccess.EventHandlers.Interfaces
 {
-    public interface IEventHandler
+    public interface IEventHandler<in TEvent> : IEventHandler where TEvent : IEvent
     {
-        void Handle<TEvent>(TEvent @event) where TEvent : IEvent;
+        void Handle(TEvent @event);
     }
 }
