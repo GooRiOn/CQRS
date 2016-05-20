@@ -1,0 +1,7 @@
+C:\REPO\CQRS\CQRS.Domain\bin\Debug\CQRS.Domain.dll
+C:\REPO\CQRS\CQRS.Domain\bin\Debug\CQRS.Domain.pdb
+C:\REPO\CQRS\CQRS.Domain\bin\Debug\CQRS.Contracts.dll
+C:\REPO\CQRS\CQRS.Domain\bin\Debug\CQRS.Contracts.pdb
+C:\REPO\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.csprojResolveAssemblyReference.cache
+C:\REPO\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.dll
+C:\REPO\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.pdb

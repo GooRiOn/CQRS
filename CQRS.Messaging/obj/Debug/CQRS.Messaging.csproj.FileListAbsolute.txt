@@ -1,0 +1,15 @@
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Messaging.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Messaging.pdb
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\Autofac.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Contracts.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.DataAccess.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\EasyNetQ.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\RabbitMQ.Client.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Contracts.pdb
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.DataAccess.pdb
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\Autofac.xml
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\EasyNetQ.xml
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\RabbitMQ.Client.xml
+C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.csprojResolveAssemblyReference.cache
+C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.dll
+C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.pdb

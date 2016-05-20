@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Autofac;
+using CQRS.DependencyInjection;
 using Microsoft.Owin;
 using Owin;
 
@@ -13,6 +12,11 @@ namespace CQRS
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
+            var conatinerBuilder = new ContainerBuilder();
+            Registration.Register(conatinerBuilder);
+
+            conatinerBuilder.Build();
         }
     }
 }
