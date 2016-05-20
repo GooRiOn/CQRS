@@ -12,14 +12,17 @@ namespace CQRS.App_Start
             var conatinerBuilder = new ContainerBuilder();
             Registration.Register(conatinerBuilder);
 
-            var container = conatinerBuilder.Build();
-
-            var customDependencyResolverConatinerBuilder = new ContainerBuilder();
-
-            customDependencyResolverConatinerBuilder.RegisterType<CustomDependencyResolver>()
+            conatinerBuilder.RegisterType<CustomDependencyResolver>()
                 .As<ICustomDependencyResolver>();
 
-            customDependencyResolverConatinerBuilder.Update(container);
+            var container = conatinerBuilder.Build();
+
+            //var containerBuilder = new ContainerBuilder();
+
+            //containerBuilder
+               
+
+            //containerBuilder.Update(container);
         }
     }
 }

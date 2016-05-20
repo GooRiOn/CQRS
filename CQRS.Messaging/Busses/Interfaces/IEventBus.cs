@@ -5,8 +5,8 @@ namespace CQRS.Messaging.Busses.Interfaces
 {
     public interface IEventBus
     {
-        void Send<TEvent>(TEvent @event) where TEvent : IEvent;
+        void Send<TEvent>(TEvent @event) where TEvent : class, IEvent;
 
-        Task SendAsync<TEvent>(TEvent @event) where TEvent : IEvent;
+        Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent;
     }
 }

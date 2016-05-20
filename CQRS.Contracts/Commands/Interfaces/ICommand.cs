@@ -4,6 +4,6 @@ namespace CQRS.Contracts.Commands.Interfaces
 {
     public interface ICommand
     {
-        Guid Id { get; } 
+        Guid Id { get; }
     }
 }

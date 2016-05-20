@@ -1,8 +1,9 @@
 ﻿using Autofac;
+using CQRS.Infrastructure.DependecyInjection.Interfaces;
 
 namespace CQRS.Infrastructure.DependecyInjection
 {
-    public class CustomDependencyResolver
+    public class CustomDependencyResolver : ICustomDependencyResolver
     {
         IContainer Container { get; }
 
