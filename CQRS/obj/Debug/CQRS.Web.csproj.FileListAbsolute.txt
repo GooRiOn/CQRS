@@ -206,3 +206,5 @@ F:\PROJECTS\CQRS\CQRS\bin\RabbitMQ.Client.xml
 F:\PROJECTS\CQRS\CQRS\obj\Debug\CQRS.Web.csprojResolveAssemblyReference.cache
 F:\PROJECTS\CQRS\CQRS\obj\Debug\CQRS.dll
 F:\PROJECTS\CQRS\CQRS\obj\Debug\CQRS.pdb
+F:\PROJECTS\CQRS\CQRS\bin\CQRS.Domain.dll
+F:\PROJECTS\CQRS\CQRS\bin\CQRS.Domain.pdb

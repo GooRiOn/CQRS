@@ -44,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependecyInjection\CustomDependencyResolver.cs" />
-    <Compile Include="DependecyInjection\Interfaces\ICustomDependencyResolver.cs" />
+    <Compile Include="DependencyInjection\CustomDependencyResolver.cs" />
+    <Compile Include="DependencyInjection\Interfaces\ICustomDependencyResolver.cs" />
+    <Compile Include="DependencyInjection\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

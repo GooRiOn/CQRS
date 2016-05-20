@@ -12,3 +12,7 @@ F:\PROJECTS\CQRS\CQRS.Domain\bin\Debug\CQRS.Contracts.pdb
 F:\PROJECTS\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.csprojResolveAssemblyReference.cache
 F:\PROJECTS\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.dll
 F:\PROJECTS\CQRS\CQRS.Domain\obj\Debug\CQRS.Domain.pdb
+F:\PROJECTS\CQRS\CQRS.Domain\bin\Debug\Autofac.dll
+F:\PROJECTS\CQRS\CQRS.Domain\bin\Debug\CQRS.Infrastructure.dll
+F:\PROJECTS\CQRS\CQRS.Domain\bin\Debug\CQRS.Infrastructure.pdb
+F:\PROJECTS\CQRS\CQRS.Domain\bin\Debug\Autofac.xml

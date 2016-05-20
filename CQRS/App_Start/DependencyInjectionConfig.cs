@@ -1,7 +1,5 @@
 ﻿using Autofac;
 using CQRS.DependencyInjection;
-using CQRS.Infrastructure.DependecyInjection;
-using CQRS.Infrastructure.DependecyInjection.Interfaces;
 
 namespace CQRS.App_Start
 {
@@ -9,20 +7,15 @@ namespace CQRS.App_Start
     {
         public static void Register()
         {
-            var conatinerBuilder = new ContainerBuilder();
-            Registration.Register(conatinerBuilder);
+            var b = new ContainerBuilder();
 
-            conatinerBuilder.RegisterType<CustomDependencyResolver>()
-                .As<ICustomDependencyResolver>();
+            Registration.Register(b);
 
-            var container = conatinerBuilder.Build();
+            IContainer container = null;
 
-            //var containerBuilder = new ContainerBuilder();
+            b.Register(ctx => container);
 
-            //containerBuilder
-               
-
-            //containerBuilder.Update(container);
+            container = b.Build();         
         }
     }
 }

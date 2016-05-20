@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CQRS.Contracts.AddProduct;
+using CQRS.Messaging.Busses.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -7,12 +10,23 @@ using System.Web.Http;
 
 namespace CQRS.Controllers
 {
-    [Authorize]
+    
     public class ValuesController : ApiController
     {
+        //ICommandBus CommandBus { get; }
+
+        //public ValuesController(ICommandBus commandBus)
+        //{
+        //    CommandBus = commandBus;
+        //}
+
         // GET api/values
         public IEnumerable<string> Get()
         {
+            //Debug.WriteLine("Hello World");
+
+            //CommandBus.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
+
             return new string[] { "value1", "value2" };
         }
 

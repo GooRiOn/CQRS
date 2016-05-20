@@ -68,6 +68,10 @@
       <Project>{1dd1e999-ad14-4c50-abf1-2925ffc36204}</Project>
       <Name>CQRS.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CQRS.Domain\CQRS.Domain.csproj">
+      <Project>{F4C88130-D062-4345-8355-A2FC4413491F}</Project>
+      <Name>CQRS.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -57,17 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandHandlers\Interfaces\ICommandHandler.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />
     <Compile Include="Entities\EventsEntity.cs" />
-    <Compile Include="EventHandlers\Interfaces\IEventHandler.cs" />
-    <Compile Include="Factories\CommandHandlerFactory.cs" />
-    <Compile Include="Factories\EventHandlerFactory.cs" />
-    <Compile Include="Factories\Interfaces\ICommandHandlerFactory.cs" />
-    <Compile Include="Factories\Interfaces\IEventHandlerFactory.cs" />
-    <Compile Include="ICommandHandler.cs" />
-    <Compile Include="IEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

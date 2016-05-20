@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using CQRS.Contracts.Events.Interfaces;
-using CQRS.DataAccess.Factories.Interfaces;
 using EasyNetQ;
 using IEventBus = CQRS.Messaging.Busses.Interfaces.IEventBus;
+using CQRS.Contracts.Interfaces;
 
 namespace CQRS.Messaging.Busses
 {
@@ -11,11 +10,11 @@ namespace CQRS.Messaging.Busses
         //TODO: Inject IBus, move static string to config
 
         IBus Bus { get; }
-        IEventHandlerFactory EventHandlerFactory { get; }
+        //IEventHandlerFactory EventHandlerFactory { get; }
 
-        public EventBus(IEventHandlerFactory eventHandlerFactory)
+        public EventBus(/*IEventHandlerFactory eventHandlerFactory*/)
         {
-            EventHandlerFactory = eventHandlerFactory;
+            //EventHandlerFactory = eventHandlerFactory;
 
             Bus = RabbitHutch.CreateBus("host:localhost");
             Bus.Subscribe<IEvent>("event_bus_subscription", ProcessBus);
@@ -33,8 +32,8 @@ namespace CQRS.Messaging.Busses
 
         private void ProcessBus<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
-            var eventHandler = EventHandlerFactory.Get<TEvent>();
-            eventHandler.Handle(@event);
+            //var eventHandler = EventHandlerFactory.Get<TEvent>();
+            //eventHandler.Handle(@event);
         }
     }
 }

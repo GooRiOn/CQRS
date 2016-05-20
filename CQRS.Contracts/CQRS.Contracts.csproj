@@ -40,10 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Interfaces\ICommand.cs" />
-    <Compile Include="Events\Interfaces\IEvent.cs" />
+    <Compile Include="ChangeProductName\ChangeProductNameCommand.cs" />
+    <Compile Include="ChangeProductName\ProductNameChangedEvent.cs" />
+    <Compile Include="ChangeProductPrice\ChangeProductPriceCommand.cs" />
+    <Compile Include="ChangeProductPrice\ProductPriceChangedEvent.cs" />
+    <Compile Include="AddProduct\ProductAddedEvent.cs" />
+    <Compile Include="AddProduct\AddProductCommand.cs" />
+    <Compile Include="EventBase.cs" />
+    <Compile Include="CommandBase.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using CQRS.Contracts.Events.Interfaces;
+using CQRS.Contracts.Interfaces;
 
 namespace CQRS.Messaging.Busses.Interfaces
 {
