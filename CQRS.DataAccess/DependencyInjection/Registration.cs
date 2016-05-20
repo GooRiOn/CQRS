@@ -6,9 +6,11 @@ namespace CQRS.DataAccess.DependencyInjection
 {
     public class Registration : Module
     {
-        public static void Register(ContainerBuilder conatinerBuilder)
+        public static void Register(ContainerBuilder containerBuilder)
         {
-            conatinerBuilder.RegisterType<CommandHandlerFactory>().As < ICommandHandlerFactory();
+            containerBuilder.RegisterType<CommandHandlerFactory>().As<ICommandHandlerFactory>();
+            containerBuilder.RegisterType<EventHandlerFactory>().As<IEventHandlerFactory>();
+            containerBuilder.RegisterType<Context>().AsSelf().InstancePerDependency();
         }
     }
 }

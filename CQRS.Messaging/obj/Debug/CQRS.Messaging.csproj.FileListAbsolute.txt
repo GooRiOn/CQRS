@@ -13,3 +13,7 @@ C:\REPO\CQRS\CQRS.Messaging\bin\Debug\RabbitMQ.Client.xml
 C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.csprojResolveAssemblyReference.cache
 C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.dll
 C:\REPO\CQRS\CQRS.Messaging\obj\Debug\CQRS.Messaging.pdb
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\EntityFramework.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Infrastructure.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\EntityFramework.xml
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Infrastructure.pdb

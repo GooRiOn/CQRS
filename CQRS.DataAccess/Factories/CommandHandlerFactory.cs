@@ -14,7 +14,7 @@ namespace CQRS.DataAccess.Factories
             CustomDependencyResolver = customDependencyResolver;
         }
 
-        public ICommandHandler<TCommand> Get<TCommand>(TCommand command) where TCommand : class, ICommand
+        public ICommandHandler<TCommand> Get<TCommand>() where TCommand : class, ICommand
         {
             return CustomDependencyResolver.Resolve<ICommandHandler<TCommand>>();
         }

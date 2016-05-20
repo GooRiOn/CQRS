@@ -1,9 +1,10 @@
 ﻿using CQRS.Contracts.Events.Interfaces;
+using CQRS.DataAccess.EventHandlers.Interfaces;
 
 namespace CQRS.DataAccess.Factories.Interfaces
 {
     public interface IEventHandlerFactory
     {
-        TEventHandler Get<TEventHandler, TEvent>(TEvent @event) where TEvent : class, IEvent;
+        IEventHandler<TEvent> Get<TEvent>() where TEvent : class, IEvent;
     }
 }

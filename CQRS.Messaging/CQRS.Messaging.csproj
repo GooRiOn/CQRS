@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Busses\CommandBus.cs" />
+    <Compile Include="Busses\EventBus.cs" />
     <Compile Include="Busses\Interfaces\ICommandBus.cs" />
     <Compile Include="Busses\Interfaces\IEventBus.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />

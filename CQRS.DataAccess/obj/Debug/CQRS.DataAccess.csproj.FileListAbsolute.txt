@@ -14,3 +14,7 @@ C:\REPO\CQRS\CQRS.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\REPO\CQRS\CQRS.DataAccess\obj\Debug\CQRS.DataAccess.csprojResolveAssemblyReference.cache
 C:\REPO\CQRS\CQRS.DataAccess\obj\Debug\CQRS.DataAccess.dll
 C:\REPO\CQRS\CQRS.DataAccess\obj\Debug\CQRS.DataAccess.pdb
+C:\REPO\CQRS\CQRS.DataAccess\bin\Debug\CQRS.Infrastructure.dll
+C:\REPO\CQRS\CQRS.DataAccess\bin\Debug\EntityFramework.Extended.dll
+C:\REPO\CQRS\CQRS.DataAccess\bin\Debug\CQRS.Infrastructure.pdb
+C:\REPO\CQRS\CQRS.DataAccess\bin\Debug\EntityFramework.Extended.xml

@@ -96,3 +96,9 @@ C:\REPO\CQRS\CQRS\bin\System.Web.Http.Owin.xml
 C:\REPO\CQRS\CQRS\bin\CQRS.DataAccess.pdb
 C:\REPO\CQRS\CQRS\obj\Debug\CQRS.dll
 C:\REPO\CQRS\CQRS\obj\Debug\CQRS.pdb
+C:\REPO\CQRS\CQRS\bin\CQRS.Infrastructure.dll
+C:\REPO\CQRS\CQRS\bin\EasyNetQ.dll
+C:\REPO\CQRS\CQRS\bin\RabbitMQ.Client.dll
+C:\REPO\CQRS\CQRS\bin\CQRS.Infrastructure.pdb
+C:\REPO\CQRS\CQRS\bin\EasyNetQ.xml
+C:\REPO\CQRS\CQRS\bin\RabbitMQ.Client.xml
