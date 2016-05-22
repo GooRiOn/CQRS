@@ -10,6 +10,7 @@ namespace CQRS.Messaging.DependencyInjection
         public static void Register(ContainerBuilder containerBuilder)
         {
             DataAccess.DependencyInjection.Registration.Register(containerBuilder);
+            Domain.DependencyInjection.Registration.Register(containerBuilder);
 
             containerBuilder.RegisterType<CommandBus>().As<ICommandBus>().SingleInstance();
         }
