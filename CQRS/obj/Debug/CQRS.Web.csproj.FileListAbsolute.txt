@@ -216,3 +216,9 @@ C:\REPO\CQRS\CQRS\bin\Autofac.Integration.Owin.dll
 C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.dll
 C:\REPO\CQRS\CQRS\bin\Autofac.Integration.Owin.xml
 C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.xml
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.Owin.dll
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.WebApi.dll
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.dll
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.Owin.xml
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.WebApi.xml
+F:\PROJECTS\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.xml

@@ -22,12 +22,12 @@ namespace CQRS.Controllers
 
     public class ValuesController : ApiController
     {
-        //ICommandBus CommandBus { get; }
+        ICommandBus CommandBus { get; }
 
-        public ValuesController(ITestInject testInject)
+        public ValuesController(ICommandBus commandBus)
         {
-            var test = testInject;
-            //CommandBus = commandBus;
+            //var test = testInject;
+            CommandBus = commandBus;
         }
 
         // GET api/values

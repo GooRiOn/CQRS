@@ -20,25 +20,29 @@ namespace CQRS.App_Start
 
             containerBuilder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            var config = new HttpConfiguration();
+            var config = GlobalConfiguration.Configuration;
 
             containerBuilder.RegisterWebApiFilterProvider(config);
 
             containerBuilder.Register(c => HttpContext.Current).As<HttpContext>().InstancePerRequest();
             containerBuilder.Register(c => HttpContext.Current.Request).As<HttpRequest>().InstancePerRequest();
 
+         
+
             containerBuilder.RegisterType<TestInject>().As<ITestInject>();
 
             Registration.Register(containerBuilder);
 
-            var container = containerBuilder.Build();
+            IContainer container = null;
+            containerBuilder.Register(c => container);
+            container = containerBuilder.Build();
 
-            var customDependencyResolverContainerBuilder = new ContainerBuilder();
+            //var customDependencyResolverContainerBuilder = new ContainerBuilder();
 
-            customDependencyResolverContainerBuilder.RegisterType<CustomDependencyResolver>()
-                .As<ICustomDependencyResolver>();
+            //customDependencyResolverContainerBuilder.RegisterType<CustomDependencyResolver>()
+            //    .As<ICustomDependencyResolver>();
 
-            customDependencyResolverContainerBuilder.Update(container);
+            //customDependencyResolverContainerBuilder.Update(container);
 
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
             appBuilder.UseAutofacMiddleware(container);
