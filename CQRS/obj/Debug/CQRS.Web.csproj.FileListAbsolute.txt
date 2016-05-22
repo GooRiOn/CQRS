@@ -208,3 +208,11 @@ F:\PROJECTS\CQRS\CQRS\obj\Debug\CQRS.dll
 F:\PROJECTS\CQRS\CQRS\obj\Debug\CQRS.pdb
 F:\PROJECTS\CQRS\CQRS\bin\CQRS.Domain.dll
 F:\PROJECTS\CQRS\CQRS\bin\CQRS.Domain.pdb
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.dll
+C:\REPO\CQRS\CQRS\bin\CQRS.Domain.dll
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.xml
+C:\REPO\CQRS\CQRS\bin\CQRS.Domain.pdb
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.Owin.dll
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.dll
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.Owin.xml
+C:\REPO\CQRS\CQRS\bin\Autofac.Integration.WebApi.Owin.xml

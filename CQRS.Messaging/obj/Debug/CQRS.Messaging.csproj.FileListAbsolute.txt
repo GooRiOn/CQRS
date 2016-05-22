@@ -38,3 +38,5 @@ F:\PROJECTS\CQRS\CQRS.Messaging\bin\Debug\EntityFramework.xml
 F:\PROJECTS\CQRS\CQRS.Messaging\bin\Debug\CQRS.Infrastructure.pdb
 F:\PROJECTS\CQRS\CQRS.Messaging\bin\Debug\CQRS.Domain.dll
 F:\PROJECTS\CQRS\CQRS.Messaging\bin\Debug\CQRS.Domain.pdb
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Domain.dll
+C:\REPO\CQRS\CQRS.Messaging\bin\Debug\CQRS.Domain.pdb
