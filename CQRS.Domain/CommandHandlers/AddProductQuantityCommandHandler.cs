@@ -14,9 +14,12 @@ namespace CQRS.Domain.CommandHandlers
 {
     class AddProductQuantityCommandHandler : CommandHandlerBase<AddProductQuantityCommand>
     {
-        public AddProductQuantityCommandHandler(IStaticCommandValidator<AddProductQuantityCommand> validator)
+        IEventEmitter EventEmitter { get; }
+
+        public AddProductQuantityCommandHandler(IStaticCommandValidator<AddProductQuantityCommand> validator, IEventEmitter eventEmitter)
             :base(commandValidator: validator)
         {
+            EventEmitter = eventEmitter;
         }
 
         protected override ICommandHandlerResult OnHandle(AddProductQuantityCommand command)
@@ -24,9 +27,10 @@ namespace CQRS.Domain.CommandHandlers
             var product = new Product(command.ProductId);
             //product.Load() // z eventsource
 
-            // TODO: siakieś metody na produkcie
+            // TODO: siakieś metody na produkcie jak potrzebne
 
-            //TODO: wygenerować zdarzenie ProductQuantityAdded...
+            EventEmitter.Emit(new ProductQuantityAddedEvent { AggregateId = command.ProductId, AggregateOrdinal = product.AggregateOrdinal + 1, AdditionalQuantity = command.AdditionalQuantity });
+
             return Ok();
         }
     }

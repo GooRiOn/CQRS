@@ -9,6 +9,8 @@ namespace CQRS.Domain.Aggregates
 {
     abstract class AggregateBase<TEventBase>
     {  
+        public int AggregateOrdinal { get; set; }
+
         public abstract void Load(IEventSource<TEventBase> eventSource);
     }
 }

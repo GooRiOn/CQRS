@@ -25,8 +25,10 @@ namespace CQRS.Domain.Aggregates
 
         public override void Load(IEventSource<IProductEvent> eventSource)
         {
-            foreach (var ev in eventSource.GetEvents().OrderBy(e => e.AggregateOrdinal).Where(p=>p.ProductId == ProductId))
+            foreach (var ev in eventSource.GetEvents().OrderBy(e => e.AggregateOrdinal).Where(p=>p.AggregateId == ProductId))
             {
+                AggregateOrdinal = ev.AggregateOrdinal;
+
                 var productAdded = ev as ProductAddedEvent;
                 if(productAdded != null)
                 {

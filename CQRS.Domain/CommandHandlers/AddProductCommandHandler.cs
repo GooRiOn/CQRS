@@ -16,16 +16,15 @@ namespace CQRS.Domain.CommandHandlers
         }
 
         protected override ICommandHandlerResult OnHandle(AddProductCommand command)
-        {
-            //TODO: Zapisać 
-
+        {           
             EventEmitter.Emit(new ProductAddedEvent
             {
+                AggregateId = Guid.NewGuid(),
                 InititalQuantity = command.InititalQuantity,
                 Name = command.Name,
                 Price = command.Price,
-                ProductId = command.Id
             });
+
             return Ok();
         }
     }

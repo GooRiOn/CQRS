@@ -7,6 +7,5 @@ namespace CQRS.Contracts.AddProduct
         public string Name { get; set; }
         public decimal Price { get; set; }
         public decimal InititalQuantity { get; set; }
-        public Guid ProductId { get; set; }
     }
 }

@@ -5,6 +5,5 @@ namespace CQRS.Contracts
 {
     public interface IProductEvent : IEvent
     {
-        Guid ProductId { get; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using CQRS.Contracts.AddProduct;
+using CQRS.Contracts.AddProductQuantity;
 using CQRS.Domain.CommandHandlers;
 using CQRS.Domain.EventHandlers;
 using CQRS.Domain.Interfaces;
@@ -19,9 +20,11 @@ namespace CQRS.Domain.DependencyInjection
 
             containerBuilder.RegisterGeneric(typeof(NullStaticCommandValidator<>)).As(typeof(IStaticCommandValidator<>));
 
-            containerBuilder.RegisterType<AddProductCommandHandler>().As<ICommandHandler<AddProductCommand>>();
+            containerBuilder.RegisterType<AddProductCommandHandler>()
+                .As<ICommandHandler<AddProductCommand>>();
 
-            containerBuilder.RegisterType<ProductAddedEventHandler>().As<IEventHandler<ProductAddedEvent>>();
+            containerBuilder.RegisterType<AddProductQuantityCommandHandler>()
+                .As<ICommandHandler<AddProductQuantityCommand>>();            
         }
     }
 }

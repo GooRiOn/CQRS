@@ -2,9 +2,8 @@
 
 namespace CQRS.Contracts.AddProductQuantity
 {
-    public class ProductQuantityAddedEvent : EventBase
+    public class ProductQuantityAddedEvent : EventBase, IProductEvent
     {
-        public Guid ProductId { get; set; }
         public decimal AdditionalQuantity { get; set; }
     }
 }
