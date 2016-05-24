@@ -1,39 +1,39 @@
 ﻿using System.Threading.Tasks;
+using CQRS.Domain.Interfaces;
 using EasyNetQ;
-using IEventBus = CQRS.Messaging.Busses.Interfaces.IEventBus;
-using CQRS.Contracts.Interfaces;
+using IEventBus = CQRS.Infrastructure.Interfaces.Busses.IEventBus;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Messaging.Busses
 {
     public class EventBus : IEventBus
     {
-        //TODO: Inject IBus, move static string to config
-
         IBus Bus { get; }
-        //IEventHandlerFactory EventHandlerFactory { get; }
+        IEventExecutor EventExecutor { get; }
 
-        public EventBus(/*IEventHandlerFactory eventHandlerFactory*/)
+        public EventBus(IEventExecutor eventExecutor)
         {
-            //EventHandlerFactory = eventHandlerFactory;
+            EventExecutor = eventExecutor;
 
-            Bus = RabbitHutch.CreateBus("host:localhost");
-            Bus.Subscribe<IEvent>("event_bus_subscription", ProcessBus);
+            Bus = RabbitHutch.CreateBus("host=localhost");
+            Bus.Receive<IEvent>("EventBus", @event => ProcessBus(@event));
         }
 
-        public void Send<TEvent>(TEvent @event) where TEvent : class, IEvent
-        {
-            Bus.Publish(@event);
-        }
+        public void Send<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+            Bus.Send("EventBus",@event);
+        
 
-        public async Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent
-        {
-            await Bus.PublishAsync(@event);
-        }
+        public async Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+            await Bus.SendAsync("EventBus", @event);
+        
 
         private void ProcessBus<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
-            //var eventHandler = EventHandlerFactory.Get<TEvent>();
-            //eventHandler.Handle(@event);
+            var tEvent = @event.GetType();
+
+            var tExecutor = EventExecutor.GetType();
+
+            tExecutor.GetMethod(nameof(IEventExecutor.Execute)).MakeGenericMethod(tEvent).Invoke(EventExecutor, new[] { @event });
         }
     }
 }

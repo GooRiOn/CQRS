@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using CQRS.Messaging.Busses.Interfaces;
 using EasyNetQ;
 using CQRS.Domain.Interfaces;
-using CQRS.Contracts.Interfaces;
 using System;
+using CQRS.Infrastructure.Interfaces.Busses;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Messaging.Busses
 {

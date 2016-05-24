@@ -6,7 +6,7 @@ namespace CQRS.DataAccess.Entities
     {
          public Guid AggregateId { get; set; }
 
-         public int Version { get; set; } 
+         public int Version { get; set; }
 
          public string EventState { get; set; }
     }

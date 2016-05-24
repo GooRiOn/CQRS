@@ -27,22 +27,11 @@ namespace CQRS.App_Start
             containerBuilder.Register(c => HttpContext.Current).As<HttpContext>().InstancePerRequest();
             containerBuilder.Register(c => HttpContext.Current.Request).As<HttpRequest>().InstancePerRequest();
 
-         
-
-            containerBuilder.RegisterType<TestInject>().As<ITestInject>();
-
             Registration.Register(containerBuilder);
 
             IContainer container = null;
             containerBuilder.Register(c => container);
             container = containerBuilder.Build();
-
-            //var customDependencyResolverContainerBuilder = new ContainerBuilder();
-
-            //customDependencyResolverContainerBuilder.RegisterType<CustomDependencyResolver>()
-            //    .As<ICustomDependencyResolver>();
-
-            //customDependencyResolverContainerBuilder.Update(container);
 
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
             appBuilder.UseAutofacMiddleware(container);

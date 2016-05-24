@@ -50,12 +50,15 @@
     <Compile Include="AddProduct\AddProductCommand.cs" />
     <Compile Include="EventBase.cs" />
     <Compile Include="CommandBase.cs" />
-    <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="IProductEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Infrastructure\CQRS.Infrastructure.csproj">
+      <Project>{bd142b9d-3600-43dc-9981-e12166e2733e}</Project>
+      <Name>CQRS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

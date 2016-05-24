@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CQRS.Contracts.Interfaces
+namespace CQRS.Infrastructure.Interfaces.Contracts
 {
     public interface IEvent
     {

@@ -49,13 +49,17 @@
     <Compile Include="CommandHandlers\AddProductQuantityCommandHandler.cs" />
     <Compile Include="CommandHandlers\CommandHandlerBase.cs" />
     <Compile Include="CommandHandlerResult.cs" />
+    <Compile Include="EventEmitter.cs" />
+    <Compile Include="EventExecutor.cs" />
     <Compile Include="EventHandlers\ProductAddedEventHandler.cs" />
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="CommandHandlers\AddProductCommandHandler.cs" />
+    <Compile Include="IEventEmitter.cs" />
     <Compile Include="Interfaces\ICommandExecutor.cs" />
     <Compile Include="Interfaces\ICommandHandler.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />
     <Compile Include="Interfaces\ICommandHandlerResult.cs" />
+    <Compile Include="Interfaces\IEventExecutor.cs" />
     <Compile Include="Interfaces\IStaticCommandValidator.cs" />
     <Compile Include="Interfaces\ICommandToEvent.cs" />
     <Compile Include="Interfaces\IEventHandler.cs" />

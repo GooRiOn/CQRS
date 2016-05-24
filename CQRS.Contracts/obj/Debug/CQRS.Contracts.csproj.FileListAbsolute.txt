@@ -1,10 +1,9 @@
-C:\REPO\CQRS\CQRS.Contracts\bin\Debug\CQRS.Contracts.dll
-C:\REPO\CQRS\CQRS.Contracts\bin\Debug\CQRS.Contracts.pdb
-C:\REPO\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.dll
-C:\REPO\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.pdb
-C:\REPO\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.csprojResolveAssemblyReference.cache
 F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\CQRS.Contracts.dll
 F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\CQRS.Contracts.pdb
+F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\CQRS.Infrastructure.dll
+F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\Autofac.dll
+F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\CQRS.Infrastructure.pdb
+F:\PROJECTS\CQRS\CQRS.Contracts\bin\Debug\Autofac.xml
+F:\PROJECTS\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.csprojResolveAssemblyReference.cache
 F:\PROJECTS\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.dll
 F:\PROJECTS\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.pdb
-F:\PROJECTS\CQRS\CQRS.Contracts\obj\Debug\CQRS.Contracts.csprojResolveAssemblyReference.cache

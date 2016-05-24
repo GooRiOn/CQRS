@@ -1,10 +1,5 @@
-﻿using CQRS.Contracts.Interfaces;
-using CQRS.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CQRS.Domain.Interfaces;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Validation
 {
