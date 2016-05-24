@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CQRS.Contracts.AddProduct
 {
-    public class ProductAddedEvent : EventBase
+    public class ProductAddedEvent : EventBase, IProductEvent
     {
         public string Name { get; set; }
         public decimal Price { get; set; }

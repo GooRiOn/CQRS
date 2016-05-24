@@ -47,6 +47,8 @@
     <Compile Include="DependencyInjection\CustomDependencyResolver.cs" />
     <Compile Include="DependencyInjection\Interfaces\ICustomDependencyResolver.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />
+    <Compile Include="IEventSource.cs" />
+    <Compile Include="IEventStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

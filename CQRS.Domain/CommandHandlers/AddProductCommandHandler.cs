@@ -1,4 +1,5 @@
 ﻿using CQRS.Contracts.AddProduct;
+using CQRS.Domain.Aggregates;
 using CQRS.Domain.Interfaces;
 using CQRS.Domain.Validation;
 using System;
@@ -18,6 +19,8 @@ namespace CQRS.Domain.CommandHandlers
 
         protected override ICommandHandlerResult OnHandle(AddProductCommand command)
         {
+            var product = new Product(Guid.NewGuid());
+                          
             //TODO: Zapisać i wygenerować zdarzenie ProductAdded...
             return Ok();
         }

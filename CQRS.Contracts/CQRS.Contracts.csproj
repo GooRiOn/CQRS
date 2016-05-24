@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="ChangeProductName\ChangeProductNameCommand.cs" />
     <Compile Include="ChangeProductName\ProductNameChangedEvent.cs" />
+    <Compile Include="AddProductQuantity\AddProductQuantityCommand.cs" />
+    <Compile Include="AddProductQuantity\ProductQuantityAddedEvent.cs" />
     <Compile Include="ChangeProductPrice\ChangeProductPriceCommand.cs" />
     <Compile Include="ChangeProductPrice\ProductPriceChangedEvent.cs" />
     <Compile Include="AddProduct\ProductAddedEvent.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="CommandBase.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IEvent.cs" />
+    <Compile Include="IProductEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregates\AggregateBase.cs" />
+    <Compile Include="Aggregates\Product.cs" />
+    <Compile Include="CommandHandlers\AddProductQuantityCommandHandler.cs" />
     <Compile Include="CommandHandlers\CommandHandlerBase.cs" />
     <Compile Include="CommandHandlerResult.cs" />
     <Compile Include="EventHandlers\ProductAddedEventHandler.cs" />

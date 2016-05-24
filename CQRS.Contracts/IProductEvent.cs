@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace CQRS.Contracts
 {
-    public class EventBase : IEvent
+    public interface IProductEvent : IEvent
     {
-        public Guid Id { get; } = Guid.NewGuid();
-
-        public Guid AggregateId { get; set; }
-
-        public int AggregateOrdinal { get; set; }
+        Guid ProductId { get; }
     }
 }

@@ -35,7 +35,7 @@ namespace CQRS.Controllers
         {
             Debug.WriteLine("Hello World");
 
-            //.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
+            CommandBus.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
 
             return new string[] { "value1", "value2" };
         }
