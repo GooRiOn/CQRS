@@ -1,24 +1,30 @@
-﻿using CQRS.Contracts.AddProduct;
+﻿using System;
+using CQRS.Contracts.AddProduct;
 using CQRS.Domain.Interfaces;
-using CQRS.Domain.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CQRS.Domain.CommandHandlers
 {
     class AddProductCommandHandler : CommandHandlerBase<AddProductCommand>
     {
-        public AddProductCommandHandler(IStaticCommandValidator<AddProductCommand> validator)
+        IEventEmitter EventEmitter { get; }
+
+        public AddProductCommandHandler(IStaticCommandValidator<AddProductCommand> validator, IEventEmitter eventEmitter)
             :base(commandValidator: validator)
         {
+            EventEmitter = eventEmitter;
         }
 
         protected override ICommandHandlerResult OnHandle(AddProductCommand command)
         {
-            //TODO: Zapisać i wygenerować zdarzenie ProductAdded...
+            //TODO: Zapisać 
+
+            EventEmitter.Emit(new ProductAddedEvent
+            {
+                InititalQuantity = command.InititalQuantity,
+                Name = command.Name,
+                Price = command.Price,
+                ProductId = command.Id
+            });
             return Ok();
         }
     }

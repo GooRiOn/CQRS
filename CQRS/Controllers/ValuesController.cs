@@ -1,25 +1,11 @@
 ﻿using CQRS.Contracts.AddProduct;
-using CQRS.Messaging.Busses.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using CQRS.Infrastructure.Interfaces.Busses;
 
 namespace CQRS.Controllers
 {
-
-    public class TestInject : ITestInject
-    {
-        
-    }
-
-    public interface ITestInject
-    {
-    }
-
     public class ValuesController : ApiController
     {
         ICommandBus CommandBus { get; }
@@ -35,7 +21,7 @@ namespace CQRS.Controllers
         {
             Debug.WriteLine("Hello World");
 
-            //.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
+            CommandBus.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
 
             return new string[] { "value1", "value2" };
         }

@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Busses\CommandBus.cs" />
     <Compile Include="Busses\EventBus.cs" />
-    <Compile Include="Busses\Interfaces\ICommandBus.cs" />
-    <Compile Include="Busses\Interfaces\IEventBus.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +69,10 @@
     <ProjectReference Include="..\CQRS.Domain\CQRS.Domain.csproj">
       <Project>{F4C88130-D062-4345-8355-A2FC4413491F}</Project>
       <Name>CQRS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Infrastructure\CQRS.Infrastructure.csproj">
+      <Project>{bd142b9d-3600-43dc-9981-e12166e2733e}</Project>
+      <Name>CQRS.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

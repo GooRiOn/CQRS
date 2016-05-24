@@ -1,4 +1,4 @@
-﻿using CQRS.Contracts.Interfaces;
+﻿using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Interfaces
 {
