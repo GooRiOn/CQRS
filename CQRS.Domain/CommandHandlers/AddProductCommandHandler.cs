@@ -11,8 +11,8 @@ namespace CQRS.Domain.CommandHandlers
         IEventEmitter EventEmitter { get; }
 
         public AddProductCommandHandler(IStaticCommandValidator<AddProductCommand> validator, 
-            IEventEmitter eventEmitter, IEventStore eventStore)
-            :base(validator, eventStore)
+            IEventEmitter eventEmitter)
+            :base(validator)
         {
             EventEmitter = eventEmitter;
         }

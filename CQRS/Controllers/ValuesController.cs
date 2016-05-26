@@ -1,8 +1,10 @@
 ﻿using CQRS.Contracts.AddProduct;
+using CQRS.Contracts.AddProductQuantity;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Web.Http;
 using CQRS.Infrastructure.Interfaces.Busses;
+using System;
 
 namespace CQRS.Controllers
 {
@@ -16,20 +18,26 @@ namespace CQRS.Controllers
             CommandBus = commandBus;
         }
 
+        static Guid ProductId = Guid.NewGuid(); 
+
         // GET api/values
         public IEnumerable<string> Get()
         {
             Debug.WriteLine("Hello World");
 
-            CommandBus.Send(new AddProductCommand { Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
+            CommandBus.Send(new AddProductCommand { AggregateId = ProductId, Name = "Hello World", InititalQuantity = 600m, Price = 12.32m });
 
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public string Get(int quantity)
         {
-            return "value";
+            Debug.WriteLine("Hello World");
+
+            CommandBus.Send(new AddProductQuantityCommand { AdditionalQuantity = quantity, AggregateId = ProductId });
+
+            return "dasdas";
         }
 
         // POST api/values

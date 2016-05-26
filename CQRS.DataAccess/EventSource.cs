@@ -13,9 +13,6 @@ namespace CQRS.DataAccess
             Context = context;
         }
 
-        public IQueryable<TEventBase> GetEvents()
-        {
-            return Context.Set<TEventBase>();
-        }
+        public IQueryable<TEventBase> GetEvents() => Context.Events.OfType<TEventBase>();
     }
 }

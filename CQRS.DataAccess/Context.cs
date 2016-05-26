@@ -1,5 +1,8 @@
 ﻿using System.Data.Entity;
 using CQRS.DataAccess.Entities;
+using CQRS.Contracts;
+using CQRS.Contracts.AddProductQuantity;
+using CQRS.Contracts.AddProduct;
 
 namespace CQRS.DataAccess
 {
@@ -10,6 +13,12 @@ namespace CQRS.DataAccess
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
         }
 
-        internal DbSet<EventsEntity> Events { get; set; }
+        public DbSet<EventBase> Events { get; set; }
+
+        public DbSet<ProductQuantityAddedEvent> ProductQuantityAddedEvents { get; set; }
+
+        public DbSet<ProductNameChangedEvent> ProductNameChangedEvents { get; set; }
+
+        public DbSet<ProductPriceChangedEvent> ProductPriceChangedEvents { get; set; }
     }
 }
