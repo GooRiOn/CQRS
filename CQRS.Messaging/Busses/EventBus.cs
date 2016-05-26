@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CQRS.Domain.Interfaces;
+using CQRS.Infrastructure.DependencyInjection.Interfaces;
 using EasyNetQ;
 using IEventBus = CQRS.Infrastructure.Interfaces.Busses.IEventBus;
 using CQRS.Infrastructure.Interfaces.Contracts;
@@ -9,11 +10,11 @@ namespace CQRS.Messaging.Busses
     public class EventBus : IEventBus
     {
         IBus Bus { get; }
-        IEventExecutor EventExecutor { get; }
+        ICustomDependencyResolver CustomDependencyResolver { get; }
 
-        public EventBus(IEventExecutor eventExecutor)
+        public EventBus(ICustomDependencyResolver customDependencyResolver)
         {
-            EventExecutor = eventExecutor;
+            CustomDependencyResolver = customDependencyResolver;
 
             Bus = RabbitHutch.CreateBus("host=localhost");
             Bus.Receive<IEvent>("EventBus", @event => ProcessBus(@event));
@@ -29,11 +30,8 @@ namespace CQRS.Messaging.Busses
 
         private void ProcessBus<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
-            var tEvent = @event.GetType();
-
-            var tExecutor = EventExecutor.GetType();
-
-            tExecutor.GetMethod(nameof(IEventExecutor.Execute)).MakeGenericMethod(tEvent).Invoke(EventExecutor, new[] { @event });
+            var eventHandler = CustomDependencyResolver.Resolve<IEventHandler<TEvent>>();
+            eventHandler.Handle(@event);
         }
     }
 }

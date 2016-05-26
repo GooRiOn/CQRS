@@ -12,3 +12,10 @@ F:\PROJECTS\CQRS\CQRS.Infrastructure\bin\Debug\Autofac.xml
 F:\PROJECTS\CQRS\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.dll
 F:\PROJECTS\CQRS\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.pdb
 F:\PROJECTS\CQRS\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.csprojResolveAssemblyReference.cache
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\bin\Debug\CQRS.Infrastructure.dll
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\bin\Debug\CQRS.Infrastructure.pdb
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\bin\Debug\Autofac.dll
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\bin\Debug\Autofac.xml
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.csprojResolveAssemblyReference.cache
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.dll
+C:\REPO\CQRS_NEW\CQRS.Infrastructure\obj\Debug\CQRS.Infrastructure.pdb

@@ -14,8 +14,8 @@ namespace CQRS.Domain.DependencyInjection
         {
             containerBuilder.RegisterType<CommandExecutor>().As<ICommandExecutor>();
 
-            containerBuilder.RegisterType<EventExecutor>().As<IEventExecutor>();
-
+            containerBuilder.RegisterGeneric(typeof (EventHandler<>)).As(typeof (IEventHandler<>));
+            
             containerBuilder.RegisterType<EventEmitter>().As<IEventEmitter>().SingleInstance();
 
             containerBuilder.RegisterGeneric(typeof(NullStaticCommandValidator<>)).As(typeof(IStaticCommandValidator<>));

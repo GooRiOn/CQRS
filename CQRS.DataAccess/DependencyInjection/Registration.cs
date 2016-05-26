@@ -9,6 +9,8 @@ namespace CQRS.DataAccess.DependencyInjection
         {
             containerBuilder.RegisterType<Context>().AsSelf().InstancePerDependency();
 
+            containerBuilder.RegisterType<EventPersister>().As<IEventPersister>();
+
             containerBuilder.RegisterGeneric(typeof (EventSource<>)).As(typeof (IEventSource<>));
 
             containerBuilder.RegisterType<EventStore>().As<IEventStore>();
