@@ -3,7 +3,7 @@ using CQRS.DataAccess.Entities;
 
 namespace CQRS.DataAccess
 {
-    internal class Context : DbContext
+    public class Context : DbContext
     {
         public Context() :base("CQRS_Write_Context")
         {

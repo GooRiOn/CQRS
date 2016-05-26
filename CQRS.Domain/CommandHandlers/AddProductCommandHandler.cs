@@ -2,6 +2,7 @@
 using CQRS.Contracts.AddProduct;
 using CQRS.Domain.Aggregates;
 using CQRS.Domain.Interfaces;
+using CQRS.Infrastructure;
 
 namespace CQRS.Domain.CommandHandlers
 {
@@ -9,8 +10,9 @@ namespace CQRS.Domain.CommandHandlers
     {
         IEventEmitter EventEmitter { get; }
 
-        public AddProductCommandHandler(IStaticCommandValidator<AddProductCommand> validator, IEventEmitter eventEmitter)
-            :base(commandValidator: validator)
+        public AddProductCommandHandler(IStaticCommandValidator<AddProductCommand> validator, 
+            IEventEmitter eventEmitter, IEventStore eventStore)
+            :base(validator, eventStore)
         {
             EventEmitter = eventEmitter;
         }

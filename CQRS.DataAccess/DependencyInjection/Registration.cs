@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CQRS.Infrastructure;
 
 namespace CQRS.DataAccess.DependencyInjection
 {
@@ -7,6 +8,10 @@ namespace CQRS.DataAccess.DependencyInjection
         public static void Register(ContainerBuilder containerBuilder)
         {
             containerBuilder.RegisterType<Context>().AsSelf().InstancePerDependency();
+
+            containerBuilder.RegisterGeneric(typeof (EventSource<>)).As(typeof (IEventSource<>));
+
+            containerBuilder.RegisterType<EventStore>().As<IEventStore>();
         }
     }
 }

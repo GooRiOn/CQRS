@@ -60,6 +60,8 @@
     <Compile Include="Context.cs" />
     <Compile Include="DependencyInjection\Registration.cs" />
     <Compile Include="Entities\EventsEntity.cs" />
+    <Compile Include="EventSource.cs" />
+    <Compile Include="EventStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

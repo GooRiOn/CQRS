@@ -2,7 +2,7 @@
 
 namespace CQRS.DataAccess.Entities
 {
-    public class EventsEntity
+    public class EventsEntity 
     {
          public Guid AggregateId { get; set; }
 
