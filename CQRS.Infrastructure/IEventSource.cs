@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CQRS.Infrastructure
 {
-    public interface IEventSource<TEventBase>
+    public interface IEventSource<out TEventBase>
     {
         IQueryable<TEventBase> GetEvents();
     }

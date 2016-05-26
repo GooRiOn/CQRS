@@ -1,12 +1,7 @@
 ﻿namespace CQRS.DataAccess
 {
-    public class EventStore : IEventStore
+    public class EventStore
     {
-        Context Context { get; }
-        
-        public EventStore(Context context)
-        {
-            Context = context;
-        }
+         
     }
 }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Infrastructure
 {
     public interface IEventStore
     {
-        IEventSource<TEventBase> GetSource<TEventBase>();
+        IEventSource<TEventBase> GetSource<TEventBase>() where TEventBase : class, IEvent;
     }
 }
