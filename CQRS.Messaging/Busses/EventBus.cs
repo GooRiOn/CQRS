@@ -17,18 +17,18 @@ namespace CQRS.Messaging.Busses
             CustomDependencyResolver = customDependencyResolver;
 
             Bus = RabbitHutch.CreateBus("host=localhost");
-            Bus.Receive<IEvent>("EventBus", @event => ProcessBus(@event));
+            Bus.Receive<object>("EventBus", @event => ProcessBus(@event));
         }
 
-        public void Send<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+        public void Send<TEvent>(TEvent @event) where TEvent : class =>
             Bus.Send("EventBus",@event);
         
 
-        public async Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+        public async Task SendAsync<TEvent>(TEvent @event) where TEvent : class =>
             await Bus.SendAsync("EventBus", @event);
         
 
-        private void ProcessBus<TEvent>(TEvent @event) where TEvent : class, IEvent
+        private void ProcessBus<TEvent>(TEvent @event) where TEvent : class
         {
             var eventHandler = CustomDependencyResolver.Resolve<IEventHandler<TEvent>>();
             eventHandler.Handle(@event);

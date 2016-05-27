@@ -4,6 +4,6 @@ namespace CQRS.Infrastructure
 {
     public interface IEventPersister
     {
-        void Persist<TEvent>(TEvent @event) where TEvent : class, IEvent;
+        void Persist<TEvent>(TEvent @event) where TEvent : class;
     }
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using CQRS.Infrastructure.Interfaces.Contracts;
+using System.ComponentModel.DataAnnotations;
 
 namespace CQRS.Contracts
 {
-    public class EventBase : IEvent
+    public class EventBase// : IEvent
     {
-        public Guid Id { get; } = Guid.NewGuid();
+        [Key]
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         public Guid AggregateId { get; set; }
 

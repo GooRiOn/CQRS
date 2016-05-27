@@ -4,7 +4,7 @@ using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.EventHandlers
 {
-    public class EventHandler<TEvent> : IEventHandler<TEvent> where TEvent : class, IEvent
+    public class EventHandler<TEvent> : IEventHandler<TEvent> where TEvent : class
     {
         IEventPersister EventPersister { get; }
 

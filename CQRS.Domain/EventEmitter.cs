@@ -12,7 +12,7 @@ namespace CQRS.Domain
             EventBus = eventBus;
         }
 
-        public void Emit<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+        public void Emit<TEvent>(TEvent @event) where TEvent : class =>
             EventBus.Send(@event);
     }
 }

@@ -8,12 +8,18 @@ namespace CQRS.DataAccess
 {
     public class Context : DbContext
     {
-        public Context() :base("CQRS_Write_Context")
+        static Context()
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
         }
 
+        public Context() :base("CQRS_Write_Context")
+        {                      
+        }
+
         public DbSet<EventBase> Events { get; set; }
+
+        public DbSet<ProductAddedEvent> ProductAddedEvent { get; set; }
 
         public DbSet<ProductQuantityAddedEvent> ProductQuantityAddedEvents { get; set; }
 
